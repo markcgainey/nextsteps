@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-px%r^b%)$%as0*_rdfw(i=x8eag(94bghm-^-xy2$r7ssi%ig9
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+# DEBUG_PROPAGATE_EXCEPTIONS = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -123,12 +124,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSFF_TRUSTED_ORIGINS = ['https://next-steps.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://next-steps.azurewebsites.net']
+
+
