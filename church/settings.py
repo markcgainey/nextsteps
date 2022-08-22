@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-px%r^b%)$%as0*_rdfw(i=x8eag(94bghm-^-xy2$r7ssi%ig9
 DEBUG = False
 # DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://next-steps.azurewebsites.net/']
 
 
 # Application definition
@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static/')
 ]
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
